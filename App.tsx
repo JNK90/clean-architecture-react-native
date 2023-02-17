@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from "react-native";
+import ContextConfig from "./ContextConfig";
+import JokeContainer from "./src/presentation/pages/facts/JokeContainer";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <ContextConfig>
+          <View style={styles.container}>
+              <StatusBar style="auto" />
+              <JokeContainer />
+          </View>
+      </ContextConfig>
   );
 }
 
