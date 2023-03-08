@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "asciidoctor.asciidoctor-vscode",
+    "dbaeumer.vscode-eslint",
+    "andys8.jest-snippets",
+    "ms-vsliveshare.vsliveshare",
+    "christian-kohler.path-intellisense",
+    "msjsdiag.vscode-react-native",
+    "sonarsource.sonarlint-vscode"
+  ]
+}

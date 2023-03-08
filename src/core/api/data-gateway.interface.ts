@@ -9,7 +9,7 @@ export const DataGatewayDummy: DataGateway = {
     getCategories: function (): Promise<string[]> {
         throw new Error('Function not implemented.');
     },
-    getJoke: function (category?: string | undefined): Promise<Joke> {
+    getJoke: function (category?: string): Promise<Joke> {
         throw new Error('Function not implemented.');
     }
 };

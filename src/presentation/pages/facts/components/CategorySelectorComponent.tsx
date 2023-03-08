@@ -1,5 +1,5 @@
 import { Picker } from "@react-native-picker/picker";
-import { ReactElement, useState } from "react";
+import { ReactElement, useCallback, useState } from "react";
 import { Button } from "react-native";
 
 type CategorySelectorProps = {
@@ -9,6 +9,7 @@ type CategorySelectorProps = {
 
 const CategorySelectorComponent = ({ categories, onCategorySelected }: CategorySelectorProps): ReactElement => {
     const [selection, setSelection] = useState<string>("");
+    const onSelection = useCallback(() => onCategorySelected(selection), [onCategorySelected]);
 
     const onSelectionChanged = (value: string, _: any): void => {
         setSelection(value);
@@ -17,12 +18,12 @@ const CategorySelectorComponent = ({ categories, onCategorySelected }: CategoryS
     return (
         <>
             <Picker selectedValue={selection} onValueChange={onSelectionChanged}>
-                <Picker.Item label="" value="" />
                 {categories.map((category) => (
                     <Picker.Item label={category} value={category} key={category} />
                 ))}
+                <Picker.Item label="all" value="" />
             </Picker>
-            <Button onPress={() => onCategorySelected(selection)} title="Get random fact!" />
+            <Button onPress={onSelection} title="Get random fact!" />
         </>
     );
 };

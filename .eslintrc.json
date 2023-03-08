@@ -1,0 +1,90 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true,
+    "react-native/react-native": true,
+    "jest/globals": true
+  },
+  "settings": {
+    "import/ignore": [
+      // https://github.com/facebook/react-native/issues/28549#issuecomment-657249702
+      "node_modules/react-native/index\\.js$"
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx", ".d.ts", ".js", ".jsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    },
+    "react": {
+      "version": "detect"
+    },
+    "import/parser": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react-redux/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import",
+    "@typescript-eslint",
+    "react-native",
+    "jest",
+    "module-resolver",
+    "react-redux",
+    "prettier"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "no-console": "error",
+    "no-use-before-define": "off",
+    "no-param-reassign": "warn",
+    "prefer-const": "error",
+    "react-redux/no-unused-prop-types": "warn",
+    "no-extra-boolean-cast": "off",
+    "react-native/no-unused-styles": "error",
+    "react-native/split-platform-components": "error",
+    "react-native/no-inline-styles": "error",
+    "react-native/no-color-literals": "warn",
+    // "react-native/no-raw-text": "error", this option is broken and resolves in an error while linting. Turned off till fixed https://github.com/Intellicode/eslint-plugin-react-native/issues/270
+    "react-native/no-single-element-style-arrays": "error",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "module-resolver/use-alias": "error",
+    "import/extensions": ["warn", "never"],
+    "react/jsx-curly-newline": ["warn", "consistent"],
+    "react/jsx-fragments": ["warn", "syntax"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
+}
