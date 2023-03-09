@@ -1,7 +1,7 @@
-import { DataGatewayContext } from "ContextConfig";
 import { ReactElement, useCallback, useContext, useEffect, useState } from "react";
 import { Button, View } from "react-native";
-import { Joke } from "src/core/entities/joke";
+import { DataGatewayContext } from "../../../../ContextConfig";
+import { Joke } from "../../../core/entities/joke";
 import CategorySelectorComponent from "./components/CategorySelectorComponent";
 import FavoritesComponent from "./components/FavoritesComponent";
 import JokeComponent from "./components/JokeComponent";
