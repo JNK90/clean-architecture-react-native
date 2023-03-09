@@ -1,17 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from "react-native";
 import ContextConfig from "./ContextConfig";
+import Router from "./Router";
 import JokeContainer from "./src/presentation/pages/facts/JokeContainer";
 
 export default function App() {
-  return (
-      <ContextConfig>
-          <View style={styles.container}>
-              <StatusBar style="auto" />
-              <JokeContainer />
-          </View>
-      </ContextConfig>
-  );
+    return (
+        <ContextConfig>
+            <Router>
+                <View style={styles.container}>
+                    <StatusBar style="auto" />
+                    <JokeContainer />
+                </View>
+            </Router>
+        </ContextConfig>
+    );
 }
 
 const styles = StyleSheet.create({
