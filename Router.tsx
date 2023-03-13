@@ -23,8 +23,8 @@ const Router = ({ children }: RouteProps): ReactElement => {
     return (
         <>
             <View>
-                <Text>Jokes</Text>
-                <Text>Newsletter</Text>
+                <Text onPress={() => changeRoute("jokes")}>Jokes</Text>
+                <Text onPress={() => changeRoute("newsletter")}>Newsletter</Text>
             </View>
             {children}
         </>
