@@ -31,6 +31,11 @@ export default function App() {
                 {activeRoute === "jokes" && <JokeContainer />}
                 {activeRoute === "newsletter" && <NewsletterContainer submitFn={subscriptionSubmitted} />}
             </View>
+            {!!subscribedUser && (
+                <View>
+                    <Text>{subscribedUser}</Text>
+                </View>
+            )}
         </ContextConfig>
     );
 }
