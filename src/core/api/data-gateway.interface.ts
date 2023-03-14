@@ -4,12 +4,3 @@ export interface DataGateway {
     getCategories: () => Promise<string[]>;
     getJoke: (category?: string) => Promise<Joke>;
 }
-
-export const DataGatewayDummy: DataGateway = {
-    getCategories: function (): Promise<string[]> {
-        throw new Error('Function not implemented.');
-    },
-    getJoke: function (category?: string): Promise<Joke> {
-        throw new Error('Function not implemented.');
-    }
-};
