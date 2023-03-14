@@ -1,13 +1,13 @@
-import { ReactElement, useCallback, useContext, useEffect, useState } from "react";
+import { ReactElement, useCallback, useEffect, useState } from "react";
 import { Button, View } from "react-native";
-import { DataGatewayContext } from "../../../../ContextConfig";
+import useDataGateway from "../../../../DI/useDataGateway";
 import { Joke } from "../../../core/entities/joke";
 import CategorySelectorComponent from "./components/CategorySelectorComponent";
 import FavoritesComponent from "./components/FavoritesComponent";
 import JokeComponent from "./components/JokeComponent";
 
 const JokeContainer = (): ReactElement => {
-    const dataGateway = useContext(DataGatewayContext);
+    const dataGateway = useDataGateway();
     const [categories, setCategories] = useState<string[]>([]);
     const [joke, setJoke] = useState<Joke>();
     const [favorites, setFavorites] = useState<Joke[]>([]);

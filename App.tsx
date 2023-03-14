@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import ContextConfig from "./ContextConfig";
 import JokeContainer from "./src/presentation/pages/facts/JokeContainer";
 import { NewsletterContainer, NewsletterForm } from "./src/presentation/pages/newsletter/NewsletterContainer";
 
@@ -21,7 +20,7 @@ export default function App() {
     }
 
     return (
-        <ContextConfig>
+        <>
             <View>
                 <Text onPress={() => changeRoute("jokes")}>Jokes</Text>
                 <Text onPress={() => changeRoute("newsletter")}>Newsletter</Text>
@@ -36,7 +35,7 @@ export default function App() {
                     <Text>{subscribedUser}</Text>
                 </View>
             )}
-        </ContextConfig>
+        </>
     );
 }
 
