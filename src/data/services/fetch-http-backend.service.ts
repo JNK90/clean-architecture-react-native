@@ -13,7 +13,6 @@ const getCategories = (): Promise<string[]> => {
         }
     })
         .then(res => res.json())
-        .then(res => res.data)
         .catch(console.error);
 };
 
@@ -30,7 +29,6 @@ const getRandomJoke = (): Promise<Joke> => {
         }
     })
         .then(res => res.json())
-        .then(res => res.data)
         .catch(console.error);
 };
 
